@@ -16,6 +16,7 @@ Please read carefully the contributing guide that you can find in this repositor
 The software uses a MIT license, which means that it is free for use, distribution and modification even for commercial use. You can read more in the license file of this repository.
 
 ## Credits
+* Start icon: [judanna](https://www.flaticon.com/free-icons/video-player") via Flaticon.
 * Stop icon: [SumberRejeki](https://www.flaticon.com/free-icons/stop-button) via Flaticon.
 * Restart icon: [Rizki Ahmad Fauzi](https://www.flaticon.com/free-icons/restart) via Flaticon.
 * Compile icon: [kawalanicon](https://www.flaticon.com/free-icons/compile) via Flaticon.
