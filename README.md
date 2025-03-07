@@ -9,6 +9,9 @@ docker compose up -d
 
 This, at least for me, is very tiring and inconvenient, and that's why I created this extension. Now you can manage this command, among others, directly from the side bar of your text editor.
 
+## How to contribute
+Please read carefully the contributing guide that you can find in this repository. You can contribute via code, providing translations, icons, and anything you can imagine. Once you have contributed to the project and the changes are in production, you will be credited for them in the Credits section, at the end of this README file.
+
 ## Licensing
 The software uses a MIT license, which means that it is free for use, distribution and modification even for commercial use. You can read more in the license file of this repository.
 
@@ -17,3 +20,4 @@ The software uses a MIT license, which means that it is free for use, distributi
 * Restart icon: [Rizki Ahmad Fauzi](https://www.flaticon.com/free-icons/restart) via Flaticon.
 * Compile icon: [kawalanicon](https://www.flaticon.com/free-icons/compile) via Flaticon.
 * Activity bar icon: [game-icons.net](https://www.svgrepo.com/svg/323639/whale-tail) via SVGRepo.
+* Pick file icon: [Iconsea](https://www.flaticon.com/free-icons/files-and-folders) via Flaticon.
