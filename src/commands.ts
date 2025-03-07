@@ -1,5 +1,9 @@
 import { exec } from "child_process";
 
+export const startContainers = async (composeFile: string) => {
+    await runCommand(`docker compose --file ${composeFile} up -d`);
+}
+
 export const stopContainer = async (serviceName: string, composeFile: string) => {
     await runCommand(`docker compose --file ${composeFile} stop ${serviceName}`);
 }
