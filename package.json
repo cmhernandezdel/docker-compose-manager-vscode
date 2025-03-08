@@ -98,7 +98,13 @@
           "contextualTitle": "Docker Compose manager"
         }
       ]
-    }
+    },
+    "viewsWelcome": [
+      {
+        "view": "docker-compose-manager-view",
+        "contents": "No services found. Perhaps you need to select a different docker compose file or start Docker Desktop?"
+      }
+    ]
   },
   "scripts": {
     "vscode:prepublish": "npm run compile",

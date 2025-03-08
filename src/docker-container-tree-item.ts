@@ -16,7 +16,6 @@ export class DockerContainerTreeItem extends vscode.TreeItem {
     public containerName: string;
 
     constructor(containerName: string, status: string) {
-        
         const icon = getStatusIcon(status);
         const label = `${icon} ${containerName}`;
         super(label, vscode.TreeItemCollapsibleState.None);
