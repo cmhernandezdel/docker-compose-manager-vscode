@@ -1,4 +1,7 @@
 # Docker Compose manager extension
+<img src="resources/logo.png" style="width:128px"/>
+
+
 This extension aims to reduce context switches between your text editor (Visual Studio Code) and the terminal while rebuilding microservices. The Docker extension, while complete, doesn't allow rebuilding an image and restarting the service so, if you are working with microservices, you'll find yourself doing the following quite often:
 
 ```
