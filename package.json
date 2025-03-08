@@ -85,7 +85,7 @@
         {
           "id": "docker-compose-manager",
           "title": "Docker Compose Manager",
-          "icon": "resources/activity-bar-icon.svg"
+          "icon": "resources/activity-bar-icon.png"
         }
       ]
     },
@@ -94,7 +94,7 @@
         {
           "id": "docker-compose-manager-view",
           "name": "Docker Compose Manager",
-          "icon": "resources/activity-bar-icon.svg",
+          "icon": "resources/activity-bar-icon.png",
           "contextualTitle": "Docker Compose manager"
         }
       ]
