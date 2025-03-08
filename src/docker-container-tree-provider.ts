@@ -24,9 +24,12 @@ export class DockerContainerProvider implements vscode.TreeDataProvider<DockerCo
       const activeServices = await cmd.getServices(this.fileName);
       const notStartedServiceNames = parsing.getServiceNames(this.fileName)
         .filter((s) => !activeServices.some((a) => a.serviceName === s));
-  
-      return activeServices.map((s) => new DockerContainerTreeItem(s.serviceName, s.status))
-        .concat(notStartedServiceNames.map((s) => new DockerContainerTreeItem(s, "not-started")));
+
+      const treeItems = activeServices.map((s) => new DockerContainerTreeItem(s.serviceName, s.status))
+      .concat(notStartedServiceNames.map((s) => new DockerContainerTreeItem(s, "not-started")));
+
+      vscode.commands.executeCommand('setContext', 'isDockerComposeFileValid', treeItems.length > 0);
+      return treeItems;
     }
 
     public set fileName (fileName: string) {
