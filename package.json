@@ -1,0 +1,131 @@
+{
+  "name": "docker-compose-manager",
+  "displayName": "Docker Compose manager",
+  "description": "Manage Docker Compose containers: rebuild, see stats, start and stop and more.",
+  "version": "0.1.0",
+  "engines": {
+    "vscode": "^1.97.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "docker-compose-manager.startContainers",
+        "title": "Start all containers",
+        "icon": "resources/start.png"
+      },
+      {
+        "command": "docker-compose-manager.stopContainer",
+        "title": "Stop container",
+        "icon": "resources/stop.png"
+      },
+      {
+        "command": "docker-compose-manager.restartContainer",
+        "title": "Restart container",
+        "icon": "resources/restart.png"
+      },
+      {
+        "command": "docker-compose-manager.rebuildAndRestartContainer",
+        "title": "Rebuild image and restart container",
+        "icon": "resources/rebuild.png"
+      },
+      {
+        "command": "docker-compose-manager.rebuildAndRestartContainerWithoutCache",
+        "title": "Rebuild image and restart container (without cache)",
+        "icon": "resources/rebuild-nocache.png"
+      },
+      {
+        "command": "docker-compose-manager.pickFile",
+        "title": "Pick a docker-compose file",
+        "icon": "resources/pick-file.png" 
+      }
+    ],
+    "menus": {
+      "view/title": [
+        {
+          "command": "docker-compose-manager.pickFile",
+          "when": "view == docker-compose-manager-view",
+          "group": "navigation"
+        },
+        {
+          "command": "docker-compose-manager.startContainers",
+          "when": "view == docker-compose-manager-view && isDockerComposeFileValid",
+          "group": "navigation"
+        }
+      ],
+      "view/item/context": [
+        {
+          "command": "docker-compose-manager.stopContainer",
+          "when": "view == docker-compose-manager-view && viewItem == running",
+          "group": "inline"
+        },
+        {
+          "command": "docker-compose-manager.restartContainer",
+          "when": "view == docker-compose-manager-view && viewItem == running",
+          "group": "inline"
+        },
+        {
+          "command": "docker-compose-manager.rebuildAndRestartContainer",
+          "when": "view == docker-compose-manager-view",
+          "group": "inline"
+        },
+        {
+          "command": "docker-compose-manager.rebuildAndRestartContainerWithoutCache",
+          "when": "view == docker-compose-manager-view",
+          "group": "inline"
+        }
+      ]
+    },
+    "viewsContainers": {
+      "activitybar": [
+        {
+          "id": "docker-compose-manager",
+          "title": "Docker Compose Manager",
+          "icon": "resources/activity-bar-icon.png"
+        }
+      ]
+    },
+    "views": {
+      "docker-compose-manager": [
+        {
+          "id": "docker-compose-manager-view",
+          "name": "Docker Compose Manager",
+          "icon": "resources/activity-bar-icon.png",
+          "contextualTitle": "Docker Compose manager"
+        }
+      ]
+    },
+    "viewsWelcome": [
+      {
+        "view": "docker-compose-manager-view",
+        "contents": "No services found. Perhaps you need to [select a different docker compose file](command:docker-compose-manager.pickFile) or start Docker Desktop?"
+      }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "pretest": "npm run compile && npm run lint",
+    "lint": "eslint src",
+    "test": "vscode-test"
+  },
+  "devDependencies": {
+    "@types/mocha": "^10.0.10",
+    "@types/node": "20.x",
+    "@types/vscode": "^1.97.0",
+    "@typescript-eslint/eslint-plugin": "^8.22.0",
+    "@typescript-eslint/parser": "^8.22.0",
+    "@vscode/test-cli": "^0.0.10",
+    "@vscode/test-electron": "^2.4.1",
+    "eslint": "^9.19.0",
+    "typescript": "^5.7.3"
+  },
+  "dependencies": {
+    "js-yaml": "^4.1.0"
+  }
+}
