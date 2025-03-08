@@ -60,12 +60,12 @@
       "view/item/context": [
         {
           "command": "docker-compose-manager.stopContainer",
-          "when": "view == docker-compose-manager-view",
+          "when": "view == docker-compose-manager-view && viewItem == running",
           "group": "inline"
         },
         {
           "command": "docker-compose-manager.restartContainer",
-          "when": "view == docker-compose-manager-view",
+          "when": "view == docker-compose-manager-view && viewItem == running",
           "group": "inline"
         },
         {

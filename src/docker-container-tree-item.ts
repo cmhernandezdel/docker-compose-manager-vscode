@@ -22,5 +22,6 @@ export class DockerContainerTreeItem extends vscode.TreeItem {
         super(label, vscode.TreeItemCollapsibleState.None);
 
         this.containerName = containerName;
+        this.contextValue = status;
     }
 }
