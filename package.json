@@ -102,7 +102,7 @@
     "viewsWelcome": [
       {
         "view": "docker-compose-manager-view",
-        "contents": "No services found. Perhaps you need to select a different docker compose file or start Docker Desktop?"
+        "contents": "No services found. Perhaps you need to [select a different docker compose file](command:docker-compose-manager.pickFile) or start Docker Desktop?"
       }
     ]
   },
