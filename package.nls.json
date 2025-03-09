@@ -1,0 +1,9 @@
+{
+    "commands.startContainers.title": "Start all containers",
+    "commands.stopContainer.title": "Stop container",
+    "commands.restartContainer.title": "Restart container",
+    "commands.rebuildAndRestartContainer.title": "Rebuild image and restart container",
+    "commands.rebuildAndRestartContainerWithoutCache.title": "Rebuild image and restart container (without cache)",
+    "commands.pickFile.title": "Pick a docker-compose file",
+    "views.welcomeView.title": "No services found. Perhaps you need to [select a different docker compose file](command:docker-compose-manager.pickFile) or start Docker Desktop?"
+}
