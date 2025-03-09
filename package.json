@@ -59,7 +59,7 @@
         },
         {
           "command": "docker-compose-manager.startContainers",
-          "when": "view == docker-compose-manager-view && isDockerComposeFileValid",
+          "when": "view == docker-compose-manager-view && isDockerComposeFileValid && !allContainersRunning",
           "group": "navigation"
         }
       ],
