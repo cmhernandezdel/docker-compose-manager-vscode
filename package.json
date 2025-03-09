@@ -5,7 +5,7 @@
   "version": "0.3.0",
   "repository": {
     "type": "git",
-    "url": "git@github.com:cmhernandezdel/docker-compose-manager-vscode.git"
+    "url": "https://github.com/cmhernandezdel/docker-compose-manager-vscode.git"
   },
   "icon": "resources/logo.png",
   "engines": {
