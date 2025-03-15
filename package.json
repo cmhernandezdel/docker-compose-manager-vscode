@@ -48,6 +48,11 @@
         "command": "docker-compose-manager.pickFile",
         "title": "%commands.pickFile.title%",
         "icon": "resources/pick-file.png"
+      },
+      {
+        "command": "docker-compose-manager.refreshView",
+        "title": "%commands.refreshView.title%",
+        "icon": "resources/refresh-view.png"
       }
     ],
     "menus": {
@@ -60,6 +65,11 @@
         {
           "command": "docker-compose-manager.startContainers",
           "when": "view == docker-compose-manager-view && isDockerComposeFileValid && !allContainersRunning",
+          "group": "navigation"
+        },
+        {
+          "command": "docker-compose-manager.refreshView",
+          "when": "view == docker-compose-manager-view && isDockerComposeFileValid",
           "group": "navigation"
         }
       ],

@@ -1,11 +1,15 @@
 # Change Log
 All notable changes to the "docker-compose-manager" extension will be documented in this file.
 
+## [Unreleased]
+- Show a "stop all containers" button, "rebuild all" button and "rebuild all (no cache)" button.
+
 ## [0.3.0]
 ### Added
 - Spanish language support.
 - Remove the "start all containers" button if all containers are already running.
-- Show a "stop all containers" button, "rebuild all" button and "rebuild all (no cache)" button.
+- Show a "refresh view" button to update view if state changes externally.
+- Update readme with support for Linux users.
 
 ## [0.2.0]
 ### Modified
