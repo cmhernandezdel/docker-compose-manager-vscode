@@ -1,0 +1,10 @@
+{
+    "commands.startContainers.title": "Ejecutar todos los contenedores",
+    "commands.stopContainer.title": "Parar contenedor",
+    "commands.restartContainer.title": "Reiniciar contenedor",
+    "commands.rebuildAndRestartContainer.title": "Recompilar imagen y reiniciar contenedor",
+    "commands.rebuildAndRestartContainerWithoutCache.title": "Recompilar imagen (sin caché) y reiniciar contenedor",
+    "commands.refreshView.title": "Recargar vista",
+    "commands.pickFile.title": "Elige un archivo docker-compose",
+    "views.welcomeView.title": "No se encontraron servicios. ¿Quizás necesites [seleccionar un archivo de docker compose distinto](command:docker-compose-manager.pickFile) o ejecutar Docker Desktop?"
+}

@@ -70,6 +70,9 @@ export function activate(context: vscode.ExtensionContext) {
         containerProvider.fileName = fileUri[0].fsPath;
         vscode.window.showInformationMessage(`Selected file: ${containerProvider.fileName}`);
       }
+    }),
+    vscode.commands.registerCommand("docker-compose-manager.refreshView", () => {
+      containerProvider.refresh();
     })
   );
 }

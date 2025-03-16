@@ -12,6 +12,16 @@ docker compose up -d
 
 This, at least for me, is very tiring and inconvenient, and that's why I created this extension. Now you can manage this command, among others, directly from the side bar of your text editor.
 
+## Important remarks for Linux users
+If you are using the extension on Linux, you'll have to add your user to the `docker` group so you don't need to preface all the commands with `sudo`. This is a known theme and happens also with the official Docker extension. To do this, you can follow the steps [in the official Docker page](https://docs.docker.com/engine/install/linux-postinstall/), but they are explained below for convenience:
+
+```
+sudo groupadd docker
+sudo usermod -aG docker $USER
+```
+
+After running those two commands, log out and log back in and you will be able to use the extension.
+
 ## How to contribute
 Please read carefully the contributing guide that you can find in this repository. You can contribute via code, providing translations, icons, and anything you can imagine. Once you have contributed to the project and the changes are in production, you will be credited for them in the Credits section, at the end of this README file.
 
@@ -25,3 +35,4 @@ The software uses a MIT license, which means that it is free for use, distributi
 * Compile icon: [kawalanicon](https://www.flaticon.com/free-icons/compile) via Flaticon.
 * Activity bar icon: [game-icons.net](https://www.svgrepo.com/svg/323639/whale-tail) via SVGRepo.
 * Pick file icon: [Iconsea](https://www.flaticon.com/free-icons/files-and-folders) via Flaticon.
+* Refresh icon: [Laisa Islam Ani](https://www.flaticon.com/free-icons/loading) via Flaticon.

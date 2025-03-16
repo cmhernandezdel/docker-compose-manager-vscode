@@ -29,6 +29,7 @@ export class DockerContainerProvider implements vscode.TreeDataProvider<DockerCo
       .concat(notStartedServiceNames.map((s) => new DockerContainerTreeItem(s, "not-started")));
 
       vscode.commands.executeCommand('setContext', 'isDockerComposeFileValid', treeItems.length > 0);
+      vscode.commands.executeCommand('setContext', 'allContainersRunning', activeServices.length > 0 && notStartedServiceNames.length === 0);
       return treeItems;
     }
 
