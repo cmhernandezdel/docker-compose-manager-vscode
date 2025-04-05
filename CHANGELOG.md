@@ -3,6 +3,11 @@ All notable changes to the "docker-compose-manager" extension will be documented
 
 ## [Unreleased]
 - Show a "stop all containers" button, "rebuild all" button and "rebuild all (no cache)" button.
+- Show basic volume info for docker compose file.
+
+## [0.4.0]
+### Added
+- Cache last picked file and last picked folder.
 
 ## [0.3.0]
 ### Added

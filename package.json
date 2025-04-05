@@ -2,7 +2,7 @@
   "name": "docker-compose-manager",
   "displayName": "Docker Compose manager",
   "description": "Manage Docker Compose containers: rebuild, see stats, start and stop and more.",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "repository": {
     "type": "git",
     "url": "https://github.com/cmhernandezdel/docker-compose-manager-vscode.git"

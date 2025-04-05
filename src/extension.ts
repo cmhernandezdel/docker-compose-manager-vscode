@@ -64,17 +64,44 @@ export function activate(context: vscode.ExtensionContext) {
         openLabel: 'Select file',
         filters: {
           'YAML files': ['yaml', 'yml']
-        }
+        },
+        defaultUri: getLatestOpenFolder(context)
       });
       if (fileUri && fileUri[0]) {
-        containerProvider.fileName = fileUri[0].fsPath;
+        const filename = fileUri[0].fsPath;
+        containerProvider.fileName = filename;
         vscode.window.showInformationMessage(`Selected file: ${containerProvider.fileName}`);
+        setLatestPickedFile(context, filename);
+        setLatestOpenFolder(context, fileUri[0]);
       }
     }),
     vscode.commands.registerCommand("docker-compose-manager.refreshView", () => {
       containerProvider.refresh();
     })
   );
+
+  getLatestPickedFile(context);
 }
 
 export function deactivate() {}
+
+function getLatestPickedFile(context: vscode.ExtensionContext) {
+  const lastUsedComposeFile = context.globalState.get<string>('dcm-last-compose-file');
+  if (lastUsedComposeFile) {
+      containerProvider.fileName = lastUsedComposeFile;
+      vscode.window.showInformationMessage(`Loaded last file: ${containerProvider.fileName}`);
+  }
+}
+
+function setLatestPickedFile(context: vscode.ExtensionContext, filename: string) {
+  context.globalState.update('dcm-last-compose-file', filename);
+}
+
+function getLatestOpenFolder(context: vscode.ExtensionContext): vscode.Uri | undefined {
+  const lastOpenFolder = context.globalState.get<vscode.Uri>('dcm-last-folder');
+  return lastOpenFolder;
+}
+
+function setLatestOpenFolder(context: vscode.ExtensionContext, folder: vscode.Uri) {
+  context.globalState.update('dcm-last-folder', folder);
+}
